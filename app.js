@@ -4,14 +4,11 @@ let select = s => document.querySelector(s),
 		mainSVG = select('#mainSVG'),
 		colorArray = ["fbe46c","fe987b","d569fa","5f88ea","63cdeb", "afff8a", "fbe46c"],
 		allPaths = toArray('path')
-
 colorArray = colorArray.map(x => Array.from(x)[0] == '#' ? x : `#${x}`);
 const interp = gsap.utils.interpolate(colorArray);
-
 gsap.set('svg', {
 	visibility: 'visible'
 })
-
 let mainTl = gsap.timeline({
 	defaults: {
 		duration: 1,
@@ -19,7 +16,6 @@ let mainTl = gsap.timeline({
 	},
 	repeat: -1
 });
-
 let cTl = gsap.timeline({
 	defaults: {
 		duration: 1,
@@ -50,7 +46,6 @@ cTl.add('part1')
 	y: 0,
 	//immediateRender: false
 }, 'part2')
-
 let o1Tl = gsap.timeline({
 	defaults: {
 		duration: 1,
@@ -115,8 +110,6 @@ lTl.add('part1')
 	duration: 1.25
 	//immediateRender: false
 }, 'part2')
-
-
 let o2Tl = gsap.timeline({
 	defaults: {
 		duration: 1,
@@ -145,8 +138,6 @@ o2Tl.add('part1')
 	y: 800,
 	duration: 1.4
 }, 'part2') 
-
-
 let uTl = gsap.timeline({
 	defaults: {
 		duration: 1,
@@ -181,7 +172,6 @@ uTl.add('part1')
 	y: -400,
 	duration: 1.2
 }, 'part2')
-
 let rTl = gsap.timeline({
 	defaults: {
 		duration: 1,
@@ -210,7 +200,6 @@ rTl.add('part1')
 	y: 700,
 	duration: 1.6
 }, 'part2')
-
 let colorTl = gsap.timeline();
 colorTl.to(allPaths, {
 	fill: '#fff',
@@ -240,8 +229,5 @@ colorTl.to(allPaths, {
 	},
 	ease: 'sine.inOut'
 }, 0).seek(100)
-
 mainTl.add([cTl, o1Tl, lTl, o2Tl, uTl, rTl])
 .add(allPaths, 0)
-
-//ScrubGSAPTimeline(mainTl)
