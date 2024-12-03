@@ -100,46 +100,46 @@ lTl.add('part1')
 	},
 	duration: 1.25
 }, 'part2')
-.fromTo(['#L2_offscreen', '#L1_offscreen'], {
+.fromTo(['#L2_offscreen', '#L1_offscreen'],{
 	y: -700
 }, {
-	stagger: {
+	stagger:{
 		each: 0.05
 	},	
 	y: 0,
 	duration: 1.25
 	//immediateRender: false
 }, 'part2')
-let o2Tl = gsap.timeline({
-	defaults: {
+let o2Tl=gsap.timeline({
+	defaults:{
 		duration: 1,
 		ease: 'power1.inOut'
 	}
 });
 o2Tl.add('part1')
-.to('#longO2', {
-	morphSVG: {
+.to('#longO2',{
+	morphSVG:{
 		shape: '#O3'
 	},
 	duration: 0.6
 }, 'part1')
-.from('#longO4', {
+.from('#longO4',{
 	y: -700,
 	duration: 0.6
 }, 'part1')
 .add('part2')
-.to('#longO4', {
-	morphSVG: {
+.to('#longO4',{
+	morphSVG:{
 		shape: "M636.56,125.04v849.85c0,27-20.61,39.99-50.91,39.99s-51.12-12.98-51.12-39.99V125.04c0-27,20.61-40.19,51.12-40.19s50.91,13.19,50.91,40.19ZM592.25,963.96V135.96c0-4.12-2.68-7.21-6.6-7.21-4.12,0-7.21,3.09-7.21,7.21v828c0,3.92,3.09,7.01,7.21,7.01,3.5,0,6.6-3.09,6.6-7.01Z"
 	},
 	duration: 1.4
 }, 'part2')
-.to('#longO2', {
+.to('#longO2',{
 	y: 800,
 	duration: 1.4
 }, 'part2') 
-let uTl = gsap.timeline({
-	defaults: {
+let uTl=gsap.timeline({
+	defaults:{
 		duration: 1,
 		ease: 'power1.inOut'
 	}
