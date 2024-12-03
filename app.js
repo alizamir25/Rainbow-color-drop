@@ -145,35 +145,35 @@ let uTl=gsap.timeline({
 	}
 });
 uTl.add('part1')
-.to('#U1', {
-	morphSVG: {
+.to('#U1',{
+	morphSVG:{
 		shape: '#longU1'
 	},
 	duration: 0.8
 }, 'part1')
-.to('#longU2', {
-	morphSVG: {
+.to('#longU2',{
+	morphSVG:{
 		shape: '#U3'
 	},
 	duration: 0.8
 }, 'part1')
 .add('part2')
-.to('#U1', {
-	morphSVG: {
+.to('#U1',{
+	morphSVG:{
 		shape: "M708.3,403.36h44.31v571.52c0,27-20.61,39.99-50.91,39.99s-51.12-12.98-51.12-39.99V403.36h43.9v560.6c0,3.92,3.09,7.01,7.21,7.01,3.5,0,6.6-3.09,6.6-7.01V403.36Z"
 	},
 	duration: 1.2
 }, 'part2')
-.to('#longU2', {
+.to('#longU2',{
 	y: 700,
 	duration: 1.2
 }, 'part2')
-.from('#U1_offscreen', {
+.from('#U1_offscreen',{
 	y: -400,
 	duration: 1.2
 }, 'part2')
-let rTl = gsap.timeline({
-	defaults: {
+let rTl=gsap.timeline({
+	defaults:{
 		duration: 1,
 		ease: 'power1.inOut'
 	}
