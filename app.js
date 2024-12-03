@@ -179,51 +179,51 @@ let rTl=gsap.timeline({
 	}
 });
 rTl.add('part1')
-.to('#R1', {
-	morphSVG: {
+.to('#R1',{
+	morphSVG:{
 		shape: '#R3_long'
 	},
 	duration: 0.4
 }, 'part1')
-.from('#R2_offscreen', {
+.from('#R2_offscreen',{
 	y: -700,
 	duration: 0.4
 }, 'part1')
 .add('part2')
- .to('#R2_offscreen', {
-	morphSVG: {
+ .to('#R2_offscreen',{
+	morphSVG:{
 		shape: "M868.66,332.36c0,10.51-5.77,20.82-11.75,23.5,5.77,2.68,11.75,13.19,11.75,23.7v632.01h-44.31V385.13c0-4.12-2.68-7.21-6.6-7.21h-7.21v633.66h-43.9V84.84h51.12c34.01,0,50.91,12.37,50.91,37.31v210.21ZM810.53,334.01h7.21c3.5,0,6.6-3.3,6.6-7.21v-190.84c0-3.92-3.09-7.21-6.6-7.21h-7.21v205.27Z"
 	},
 	duration: 1.6
 }, 'part2') 
-.to('#R1', {
+.to('#R1',{
 	y: 700,
 	duration: 1.6
 }, 'part2')
-let colorTl = gsap.timeline();
-colorTl.to(allPaths, {
+let colorTl=gsap.timeline();
+colorTl.to(allPaths,{
 	fill: '#fff',
-	duration: 0.25 * colorArray.length,
-	modifiers: {
-		fill: function() {
+	duration: 0.25*colorArray.length,
+	modifiers:{
+		fill: function(){
       return interp(this.ratio);
     }
 	},
-	stagger: {
+	stagger:{
 		each: 0.05,
 		repeat: -1
 	},
 	ease: 'sine.inOut'
 }).seek(100)
-.to('#glowAlpha', {
+.to('#glowAlpha',{
 	floodColor: '#fff',
-	duration: 0.25 * colorArray.length,
+	duration: 0.25*colorArray.length,
 	modifiers: {
-		floodColor: function() {
+		floodColor: function(){
       return interp(this.ratio);
     }
 	},
-	stagger: {
+	stagger:{
 		each: 0.05,
 		repeat: -1
 	},
