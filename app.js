@@ -23,49 +23,49 @@ let cTl=gsap.timeline({
 	}
 });
 cTl.add('part1')
-.to(['#C2', '#C3'], {
+.to(['#C2', '#C3'],{
 	y: '+=700'
 }, 'part1')
-.to('#C1', {
-	morphSVG: {
+.to('#C1',{
+	morphSVG:{
 		shape: '#longC'
 	}
 }, 'part1')
 .add('part2')
-.to('#C1', {
-	morphSVG: {
+.to('#C1',{
+	morphSVG:{
 		shape: '#longC3'
 	}
 }, 'part2')
-.fromTo(['#C2_offscreen', '#C1_offscreen'], {
-	y: -700
+.fromTo(['#C2_offscreen', '#C1_offscreen'],{
+	y:-700
 }, {
-	stagger: {
+	stagger:{
 		each: 0.05
 	},
 	y: 0,
 	//immediateRender: false
 }, 'part2')
-let o1Tl = gsap.timeline({
-	defaults: {
+let o1Tl=gsap.timeline({
+	defaults:{
 		duration: 1,
 		ease: 'power1.inOut'
 	}
 });
 o1Tl.add('part1')
-.to('#O2', {
+.to('#O2',{
 	y: 700,
 	duration: 1.15
 }, 'part1')
-.to('#longO1', {
-	morphSVG: {
+.to('#longO1',{
+	morphSVG:{
 		shape: '#longO1_1'
 	},
 	duration: 1.15
 }, 'part1')
 .add('part2')
-.to('#longO1', {
-	morphSVG: {
+.to('#longO1',{
+	morphSVG:{
 		shape: '#O2'
 	},
 	duration: 0.85
