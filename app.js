@@ -70,24 +70,24 @@ o1Tl.add('part1')
 	},
 	duration: 0.85
 }, 'part2')
-.from('#longO1_offscreen', {
-	y: -700,
+.from('#longO1_offscreen',{
+	y:-700,
 	duration: 0.85
 }, 'part2')
 
-let lTl = gsap.timeline({
-	defaults: {
+let lTl=gsap.timeline({
+	defaults:{
 		duration: 1,
 		ease: 'power1.inOut'
 	}
 });
 lTl.add('part1')
-.to(['#L2', '#L3'], {
-	y: 700,
+.to(['#L2', '#L3'],{
+	y:700,
 	duration: 0.75
 }, 'part1')
-.to('#L1', {
-	morphSVG: {
+.to('#L1',{
+	morphSVG:{
 		shape: '#longL',
 		shapeIndex: 6
 	},
@@ -95,7 +95,7 @@ lTl.add('part1')
 }, 'part1')
 .add('part2')
 .to('#L1', {
-	morphSVG: {
+	morphSVG:{
 		shape: '#L3'
 	},
 	duration: 1.25
