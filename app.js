@@ -1,23 +1,23 @@
 gsap.config({trialWarn: false});
-let select = s => document.querySelector(s),
-		toArray = s => gsap.utils.toArray(s),
-		mainSVG = select('#mainSVG'),
-		colorArray = ["fbe46c","fe987b","d569fa","5f88ea","63cdeb", "afff8a", "fbe46c"],
-		allPaths = toArray('path')
-colorArray = colorArray.map(x => Array.from(x)[0] == '#' ? x : `#${x}`);
-const interp = gsap.utils.interpolate(colorArray);
-gsap.set('svg', {
+let select=s=>document.querySelector(s),
+		toArray=s=>gsap.utils.toArray(s),
+		mainSVG=select('#mainSVG'),
+		colorArray=["fbe46c","fe987b","d569fa","5f88ea","63cdeb", "afff8a", "fbe46c"],
+		allPaths=toArray('path')
+colorArray = colorArray.map(x=>Array.from(x)[0]=='#'?x:`#${x}`);
+const interp=gsap.utils.interpolate(colorArray);
+gsap.set('svg',{
 	visibility: 'visible'
 })
-let mainTl = gsap.timeline({
-	defaults: {
+let mainTl=gsap.timeline({
+	defaults:{
 		duration: 1,
 		ease: 'power1.inOut'
 	},
-	repeat: -1
+	repeat:-1
 });
-let cTl = gsap.timeline({
-	defaults: {
+let cTl=gsap.timeline({
+	defaults:{
 		duration: 1,
 		ease: 'power1.inOut'
 	}
